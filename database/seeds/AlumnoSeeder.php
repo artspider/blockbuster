@@ -14,14 +14,14 @@ class AlumnoSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        for($i=0; $i < 50; $i++){
-            DB::table('alumno')->insert(array(
-                'nombre' => $faker->firstNameMale,
-                'email' => $faker->email,
-                'password' => $faker->randomDigit,
-                'created_at' => date('Y-m-d H:m:s'),
-                'updated_at' => date('Y-m-d H:m:s')
-            ));
+        for($i=0; $i < 50; $i++) {
+           DB::table('alumno')->insert([
+               'nombre' => $faker->FirstNameMale,
+               'email' => $faker->email,
+               'password' => $faker->randomDigit,
+               'created_at' => date('Y-m-d H:m:s'),
+               'updated_at' => date('Y-m-d H:m:s'),
+           ]);
         }
         /*
         DB::table('alumno')->insert([
